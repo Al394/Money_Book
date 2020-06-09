@@ -16,7 +16,8 @@
             android:layout_centerVertical="true"
             android:contentDescription="@string/card_relativelayout"
             android:padding="10dp"
-            app:srcCompat="@drawable/vertical_line" />
+            app:srcCompat="@drawable/vertical_line"
+            android:tint="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/tipo"
