@@ -5,12 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/backgroud">
+    android:background="@color/colorBackgroundD">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            app:title="@string/app_name"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:backgroundTint="@color/colorPrimary"
+            app:menu="@menu/app_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar2"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        app:menu="@menu/app_menu"
+        app:backgroundTint="@color/colorPrimary"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -22,7 +41,13 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:id="@+id/add"
+        android:src="@drawable/add_round"
+        app:backgroundTint="@color/colorAccent"
+        app:maxImageSize="40dp"
+        app:layout_anchor="@id/bottomAppBar2"
+        android:visibility="visible"
+        android:clickable="true"
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
