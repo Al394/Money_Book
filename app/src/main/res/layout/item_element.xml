@@ -2,15 +2,17 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:layout_margin="3dp">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/barretta"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerVertical="true"
@@ -23,11 +25,12 @@
             android:id="@+id/tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/barretta"
             android:text="@string/tipo"
             android:textSize="20sp"
             android:paddingTop="10dp"
-            style="bold"
+            android:paddingBottom="3dp"
+            android:textStyle="bold"
             tools:ignore="RtlSymmetry" />
 
         <TextView
@@ -35,7 +38,7 @@
             android:id="@+id/descrizione"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageView3"
+            android:layout_toEndOf="@+id/barretta"
             android:layout_below="@id/tipo"
             android:text="@string/descrizione"
             android:textSize="20sp"
@@ -47,10 +50,12 @@
             android:layout_height="73dp"
             android:layout_alignParentEnd="true"
             app:srcCompat="@drawable/more_vert_round24"
-            android:contentDescription="@string/menu" />
+            android:contentDescription="@string/menu"
+            android:clickable="true"/>
 
 
         <TextView
+            android:id="@+id/saldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"

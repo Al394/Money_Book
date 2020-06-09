@@ -4,7 +4,7 @@
     <string name="menu">Menu</string>
     <string name="barra">barra</string>
     <string name="card_relativelayout">Card relativelayout</string>
-    <string name="tipo">tipo</string>
-    <string name="descrizione">descrizione</string>
-    <string name="money">money</string>
+    <string name="tipo">Tipo</string>
+    <string name="descrizione">Descrizione</string>
+    <string name="money">00,00€</string>
 </resources>
