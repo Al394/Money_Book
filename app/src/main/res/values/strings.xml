@@ -7,4 +7,9 @@
     <string name="tipo">Tipo</string>
     <string name="descrizione">Descrizione</string>
     <string name="money">00,00€</string>
+    <string name="title">Titolo</string>
+    <string name="supporting_text">Aggiungi una nuova voce.</string>
+    <string name="cancel">Cancella</string>
+    <string name="decline">Annulla</string>
+    <string name="accept">Accetta</string>
 </resources>
