@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         add.setOnClickListener(){
             val sfm = supportFragmentManager
             val addfr=DialogAdd()
@@ -23,6 +24,19 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        fun lista(size: Int): List<ItemCardData> {
+            val list = ArrayList<ItemCardData>()
+            for (i in 0 until size) {
+                val drawable = when (i % 3) {
+                    0 -> R.drawable.vertical_line
+                   else -> R.drawable.vertical_line
+                }
+                val item = ItemCardData(drawable, "Casa", "Line 2","20",1)
+                list += item
+            }
+            return list
+        }
+    lista(50)
 
     }
 
