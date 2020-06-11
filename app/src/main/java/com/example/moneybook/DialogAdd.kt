@@ -5,7 +5,6 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import java.util.zip.Inflater
 
 class DialogAdd : DialogFragment() {
 
@@ -13,11 +12,9 @@ class DialogAdd : DialogFragment() {
         return activity?.let {
             // Use the Builder class for convenient dialog construction
             val builder = AlertDialog.Builder(it)
-            val inflater = requireActivity().layoutInflater
                 builder.setView(R.layout.dialog_add_item)
                 .setPositiveButton(R.string.accept,
                     DialogInterface.OnClickListener { dialog, id ->
-
                     })
                 .setNegativeButton(R.string.cancel,
                     DialogInterface.OnClickListener { dialog, id ->
