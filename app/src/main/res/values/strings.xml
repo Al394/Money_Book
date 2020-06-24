@@ -6,10 +6,15 @@
     <string name="card_relativelayout">Card relativelayout</string>
     <string name="tipo">Tipo</string>
     <string name="descrizione">Descrizione</string>
-    <string name="money">00,00€</string>
+    <string name="money">00,00</string>
     <string name="title">Titolo</string>
-    <string name="supporting_text">Aggiungi una nuova voce.</string>
+    <string name="supporting_text">Aggiungi/Sottrai denaro.</string>
     <string name="cancel">Cancella</string>
     <string name="decline">Annulla</string>
     <string name="accept">Accetta</string>
+    <string name="modifica">Modifica</string>
+    <string name="elimina">Elimina</string>
+    <string name="Tipo">AutoCompleteTextView</string>
+    <string name="euro">Euro</string>
+    <string name="_00_00">00.00</string>
 </resources>

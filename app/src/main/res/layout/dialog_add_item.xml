@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundD"
@@ -14,18 +15,59 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:padding="10dp"
+        android:layout_marginHorizontal="10dp"
         android:text="@string/supporting_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Euro"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/euro"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/saldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saldo"
+        app:layout_constraintTop_toBottomOf="@+id/descrizione" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tipo"
+        android:completionThreshold="1"
+        android:inputType="text"
+        android:maxLines="0"
+        android:layout_marginHorizontal="10dp"
+        android:completionHint="Seleziona il tipo di operazione."
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/descrizione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:hint="@string/descrizione"
+        android:maxLines="0"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tipo"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/saldo"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Euro"
+        android:hint="@string/_00_00"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_marginHorizontal="10dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintTop_toBottomOf="@+id/descrizione"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout"
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,17 +10,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/primo"
         >
 
         <ImageView
             android:id="@+id/barretta"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
             android:contentDescription="@string/card_relativelayout"
             android:padding="10dp"
             app:srcCompat="@drawable/vertical_line"
-            android:tint="@color/colorPrimary"/>
+            android:tint="@color/colorPrimary"
+            android:clickable="true"/>
 
         <TextView
             android:id="@+id/tipo"
@@ -29,10 +31,10 @@
             android:layout_toEndOf="@+id/barretta"
             android:text="@string/tipo"
             android:textSize="20sp"
-            android:paddingTop="10dp"
+            android:paddingTop="5dp"
             android:paddingBottom="3dp"
             android:textStyle="bold"
-            tools:ignore="RtlSymmetry" />
+            />
 
         <TextView
 
@@ -43,31 +45,43 @@
             android:layout_below="@id/tipo"
             android:text="@string/descrizione"
             android:textSize="20sp"
-            tools:ignore="RtlSymmetry" />
 
-        <ImageView
-            android:id="@+id/more"
-            android:layout_width="39dp"
-            android:layout_height="73dp"
-            android:layout_alignParentEnd="true"
-            app:srcCompat="@drawable/more_vert_round24"
-            android:contentDescription="@string/menu"
-            android:clickable="true"/>
+            />
 
 
         <TextView
             android:id="@+id/saldo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="-117dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="15dp"
-            android:layout_toStartOf="@+id/more"
+            android:layout_toStartOf="@+id/elimina"
             android:text="@string/money"
             android:textSize="20sp"
             tools:ignore="RelativeOverlap" />
 
+        <ImageView
+            android:id="@+id/elimina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/delete_round"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:paddingTop="10dp"
+            />
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/edit_round"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/elimina"
+            android:clickable="true"
+            />
+
+
     </RelativeLayout>
+
 
 
 </androidx.cardview.widget.CardView>

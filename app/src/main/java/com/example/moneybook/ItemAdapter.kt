@@ -15,7 +15,7 @@ class ItemAdapter(private val itemList: List<ItemCardData>):RecyclerView.Adapter
         val tipo: TextView = itemView.tipo
         val descrizione: TextView = itemView.descrizione
         val saldo: TextView = itemView.saldo
-        val more: ImageView = itemView.more
+
 
 
     }
@@ -35,7 +35,7 @@ class ItemAdapter(private val itemList: List<ItemCardData>):RecyclerView.Adapter
         holder.tipo.text =currentItem.tipo
         holder.descrizione.text =currentItem.descrizione
         holder.saldo.text =currentItem.saldo
-        holder.more.setImageResource(currentItem.menu)
+
 
     }
 }

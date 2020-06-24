@@ -8,6 +8,8 @@
         android:icon="@drawable/search_round"
         android:title="@string/search"
         app:showAsAction="ifRoom"
+
         />
+
 
 </menu>
