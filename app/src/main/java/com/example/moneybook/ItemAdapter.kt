@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_element.view.*
 
 class ItemAdapter(private val itemList: List<ItemCardData>):RecyclerView.Adapter<ItemAdapter.ItemHolder>() {
+
     class ItemHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val barretta: ImageView = itemView.barretta
+
         val tipo: TextView = itemView.tipo
         val descrizione: TextView = itemView.descrizione
         val saldo: TextView = itemView.saldo
-
 
 
     }
@@ -31,7 +31,7 @@ class ItemAdapter(private val itemList: List<ItemCardData>):RecyclerView.Adapter
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         val currentItem = itemList[position]
 
-        holder.barretta.setImageResource(currentItem.barretta)
+
         holder.tipo.text =currentItem.tipo
         holder.descrizione.text =currentItem.descrizione
         holder.saldo.text =currentItem.saldo

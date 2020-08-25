@@ -67,16 +67,21 @@
             app:srcCompat="@drawable/delete_round"
             android:layout_alignParentEnd="true"
             android:clickable="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:paddingTop="10dp"
-            />
+            android:contentDescription="@string/elimina" />
         <ImageView
             android:id="@+id/edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/edit_round"
             android:layout_alignParentEnd="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:layout_below="@+id/elimina"
             android:clickable="true"
+            android:contentDescription="@string/modifica"
             />
 
 

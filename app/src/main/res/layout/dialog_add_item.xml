@@ -1,74 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorWhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackgroundD"
-    >
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:padding="10dp"
-        android:layout_marginHorizontal="10dp"
-        android:text="@string/supporting_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:id="@+id/relative"
+>
 
     <TextView
         android:id="@+id/Euro"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/descrizione"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
         android:layout_marginTop="14dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_toEndOf="@+id/saldo"
         android:text="@string/euro"
-        android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@id/saldo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/saldo"
-        app:layout_constraintTop_toBottomOf="@+id/descrizione" />
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="@string/supporting_text" />
 
     <AutoCompleteTextView
         android:id="@+id/tipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/tipo"
-        android:completionThreshold="1"
-        android:inputType="text"
-        android:maxLines="0"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="8dp"
         android:completionHint="Seleziona il tipo di operazione."
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:completionThreshold="1"
+        android:hint="@string/tipo"
+        android:inputType="text"
+        android:maxLines="0" />
 
     <EditText
         android:id="@+id/descrizione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tipo"
+        android:layout_alignParentStart="true"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="9dp"
+        android:autofillHints=""
         android:hint="@string/descrizione"
-        android:maxLines="0"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/tipo"
-        android:autofillHints="" />
+        android:maxLines="0" />
 
     <EditText
         android:id="@+id/saldo"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/descrizione"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:autofillHints="Euro"
         android:hint="@string/_00_00"
         android:inputType="numberDecimal|numberSigned"
-        android:layout_marginHorizontal="10dp"
-        android:textAlignment="textEnd"
-        app:layout_constraintTop_toBottomOf="@+id/descrizione"
-        app:layout_constraintStart_toStartOf="@id/constraintLayout"
-        />
+        android:textAlignment="textEnd" />
+
+    <Button
+        android:id="@+id/cancella"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conferma"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/annulla" />
+
+    <Button
+        android:id="@+id/conferma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saldo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/conferma" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
